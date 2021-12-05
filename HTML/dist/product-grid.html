@@ -9,7 +9,11 @@
 
     <!--plugin css file -->
     <link rel="stylesheet" href="assets/plugin/nouislider/nouislider.min.css">
+    <!--plugin css file -->
+    <link rel="stylesheet" href="assets/plugin/nouislider/nouislider.min.css">
 
+    <!-- project css file  -->
+    <link rel="stylesheet" href="assets/css/ebazar.style.min.css">
     <!-- project css file  -->
     <link rel="stylesheet" href="assets/css/ebazar.style.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -346,7 +350,7 @@
                                         <div class="collapse show" id="category" >
                                             <div class="filter-search">
                                                 <form action="#">
-                                                    <input type="text" placeholder="Search" class="form-control">
+                                                    <input type="text" id="productSearch" placeholder="Search" class="form-control">
                                                     <button><i class="lni lni-search-alt"></i></button>
                                                 </form>
                                             </div>
@@ -354,8 +358,14 @@
                                                 <ul class="category-list">
                                                     <li><a href="#" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" class="collapsed">Subseries</a>
                                                         <ul id="collapseOne" class="sub-category collapse" data-parent="#category" >
-                                                            <li><a href="#">All</a></li>
-                                                            <li><a href="#">EasyIP 4.0 with ColorVu</a></li>
+                                                            <div class="type-check">
+                                                                <input type="checkbox" id="rating-5">
+                                                                <span href="#">EasyIP 4.0 with ColorVu</span>
+                                                            </div>
+                                                            <li>
+                                                                
+                                                                <a href="#">EasyIP 4.0 with ColorVu</a>
+                                                            </li>
                                                             <li><a href="#">EasyIP 4.0 with AcuSense</a></li>
                                                             <li><a href="#">EasyIP 3.0</a></li>
                                                             <li><a href="#">EasyIP 2.0 Plus with AcuSense</a></li>
@@ -709,7 +719,7 @@
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Innnnnnnnnnn","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
@@ -1204,8 +1214,8 @@ var state = {
     'querySet': productList,
 
     'page': 1,
-    'rows': 5,
-    'window': 5,
+    'rows': 6,
+    'window': 6,
 }
 
 buildTable()
@@ -1273,10 +1283,10 @@ function pageButtons(pages) {
 }
 
 
-function buildTable() {
+function buildTable(tableData=state.querySet) {
     var list = $('#productList')
 
-    var data = pagination(state.querySet, state.page, state.rows)
+    var data = pagination(tableData, state.page, state.rows)
     var myList = data.querySet
 
     for (var i = 1 in myList) {
@@ -1315,6 +1325,46 @@ function buildTable() {
 
     pageButtons(data.pages)
 }
+
+   $(document).ready(function(){
+      
+       $("#rating-5").change(function(){
+           if(this.checked){
+              
+            
+           }
+           else{
+              
+           }
+       })
+   })
+
+   $(document).ready(function(){
+  $("#productSearch").on("keyup", function() {
+      var result = [];
+    var value = $(this).val().toLowerCase();
+    for (var i=0 ; i < productList.length ; i++)
+     {
+       
+    if (productList[i]["modelName"].toLocaleLowerCase() == value) {
+        result.push(productList[i]);
+        console.log(productList[i])
+      }
+    }
+    if (value.length == 0){
+        console.log(productList)
+        buildTable(productList)
+    }
+    else{
+        console.log(result)
+        buildTable(result)
+    }
+   
+ 
+  });
+});
+
+
     </script>
 </body>
 </html> 
