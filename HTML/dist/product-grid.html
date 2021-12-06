@@ -356,36 +356,65 @@
                                             </div>
                                             <div class="filter-category">
                                                 <ul class="category-list">
-                                                    <li><a href="#" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" class="collapsed">Subseries</a>
+                                                    <!-- <li><a href="#" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" class="collapsed">Subseries</a>
                                                         <ul id="collapseOne" class="sub-category collapse" data-parent="#category" >
-                                                            <div class="type-check">
-                                                                <input type="checkbox" id="rating-5">
-                                                                <span href="#">EasyIP 4.0 with ColorVu</span>
-                                                            </div>
-                                                            <li>
-                                                                
-                                                                <a href="#">EasyIP 4.0 with ColorVu</a>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All">
+                                                                <label for="check-box"> All</label><br>
                                                             </li>
-                                                            <li><a href="#">EasyIP 4.0 with AcuSense</a></li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="EasyIP 4.0 with ColorVu">
+                                                                <label for="check-box"> EasyIP 4.0 with ColorVu</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="EasyIP 4.0 with AcuSense">
+                                                                <label for="check-box"> EasyIP 4.0 with AcuSense</label><br>
+                                                            </li>
+
+                                                           
                                                             <li><a href="#">EasyIP 3.0</a></li>
                                                             <li><a href="#">EasyIP 2.0 Plus with AcuSense</a></li>
                                                             <li><a href="#">EasyIP 2.0 Plus</a></li>
                                                             <li><a href="#">EasyIP 1.0 Plus</a></li>
                                                         </ul>
-                                                    </li>
+                                                    </li> -->
                                                     <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Case Type</a>
                                                         <ul id="collapseTwo" class="sub-category collapse" data-parent="#category">
-                                                            <li><a href="#">All</a></li>
-                                                            <li><a href="#">Box</a></li>
-                                                            <li><a href="#">Bullet</a></li>
-                                                            <li><a href="#">Dome</a></li>
-                                                            <li><a href="#">Turrent</a></li>
-                                                            <li><a href="#">Fisheye</a></li>
-                                                            <li><a href="#">Cube</a></li>
+                                                           
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All"  onclick="searchByType(value)">
+                                                                <label for="check-box"> All</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="Box" onclick="searchByType(value)">
+                                                                <label for="check-box"> Box</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="Bullet">
+                                                                <label for="check-box"> Bullet</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All">
+                                                                <label for="check-box"> Dome</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All">
+                                                                <label for="check-box"> Turrent</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All">
+                                                                <label for="check-box"> Fisheye</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All">
+                                                                <label for="check-box"> Cube</label><br>
+                                                            </li>
+                                                            
+                                                   
                                                         </ul>
                                                     </li>
-                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Resolution</a>
-                                                        <ul id="collapseTwo" class="sub-category collapse" data-parent="#category">
+                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseThree">Resolution</a>
+                                                        <ul id="collapseThree" class="sub-category collapse" data-parent="#category">
                                                             <li><a href="#">All</a></li>
                                                             <li><a href="#">2MP</a></li>
                                                             <li><a href="#">3MP</a></li>
@@ -396,32 +425,32 @@
                                                            
                                                         </ul>
                                                     </li>
-                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Lens Type</a>
-                                                        <ul id="collapseTwo" class="sub-category collapse" data-parent="#category">
+                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseFour">Lens Type</a>
+                                                        <ul id="collapseFour" class="sub-category collapse" data-parent="#category">
                                                             <li><a href="#">All</a></li>
                                                             <li><a href="#">Varifocal Lens</a></li>
                                                             <li><a href="#">Fixed Lens</a></li>
                                                             <li><a href="#">Motorized Lens </a></li>
                                                          </ul>
                                                     </li>
-                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Illumination Level </a>
-                                                        <ul id="collapseTwo" class="sub-category collapse" data-parent="#category">
+                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseFive">Illumination Level </a>
+                                                        <ul id="collapseFive" class="sub-category collapse" data-parent="#category">
                                                             <li><a href="#">All</a></li>
                                                             <li><a href="#">Normal</a></li>
                                                             <li><a href="#">Powered by Darkfighter</a></li>
                                                             <li><a href="#">ColorVu</a></li>
                                                          </ul>
                                                     </li>
-                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo">WDR</a>
-                                                        <ul id="collapseTwo" class="sub-category collapse" data-parent="#category">
+                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseSix">WDR</a>
+                                                        <ul id="collapseSix" class="sub-category collapse" data-parent="#category">
                                                             <li><a href="#">All</a></li>
                                                             <li><a href="#">DWDR</a></li>
                                                             <li><a href="#">True WDR</a></li>
                                                            
                                                          </ul>
                                                     </li>
-                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo">IR Distance </a>
-                                                        <ul id="collapseTwo" class="sub-category collapse" data-parent="#category">
+                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseSeven">IR Distance </a>
+                                                        <ul id="collapseSeven" class="sub-category collapse" data-parent="#category">
                                                             <li><a href="#">All</a></li>
                                                             <li><a href="#">0-20m</a></li>
                                                             <li><a href="#">21-50m</a></li>
@@ -429,8 +458,8 @@
                                                             <li><a href="#">N/A</a></li>
                                                          </ul>
                                                     </li>
-                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Protection Level </a>
-                                                        <ul id="collapseTwo" class="sub-category collapse" data-parent="#category">
+                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEight">Protection Level </a>
+                                                        <ul id="collapseEight" class="sub-category collapse" data-parent="#category">
                                                             <li><a href="#">All</a></li>
                                                             <li><a href="#">IP66</a></li>
                                                             <li><a href="#">IP67</a></li>
@@ -439,8 +468,8 @@
                                                             <li><a href="#">N/A</a></li>
                                                          </ul>
                                                     </li>
-                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Power Supply</a>
-                                                        <ul id="collapseTwo" class="sub-category collapse" data-parent="#category">
+                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseNine">Power Supply</a>
+                                                        <ul id="collapseNine" class="sub-category collapse" data-parent="#category">
                                                             <li><a href="#">All</a></li>
                                                             <li><a href="#">DC12V</a></li>
                                                             <li><a href="#">DC12V&PoE</a></li>
@@ -449,24 +478,24 @@
                                                             <li><a href="#">DC24V&POE</a></li>
                                                          </ul>
                                                     </li>
-                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Storage Type</a>
-                                                        <ul id="collapseTwo" class="sub-category collapse" data-parent="#category">
+                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTen">Storage Type</a>
+                                                        <ul id="collapseTen" class="sub-category collapse" data-parent="#category">
                                                             <li><a href="#">All</a></li>
                                                             <li><a href="#">SD Card</a></li>
                                                             <li><a href="#">N/A</a></li>
                                                             
                                                          </ul>
                                                     </li>
-                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Wireless Network </a>
-                                                        <ul id="collapseTwo" class="sub-category collapse" data-parent="#category">
+                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEleven">Wireless Network </a>
+                                                        <ul id="collapseEleven" class="sub-category collapse" data-parent="#category">
                                                             <li><a href="#">All</a></li>
                                                             <li><a href="#">SD Card</a></li>
                                                             <li><a href="#">N/A</a></li>
                                                             
                                                          </ul>
                                                     </li>
-                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Wireless Network </a>
-                                                        <ul id="collapseTwo" class="sub-category collapse" data-parent="#category">
+                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsetwelve">Wireless Network </a>
+                                                        <ul id="collapsetwelve" class="sub-category collapse" data-parent="#category">
                                                             <li><a href="#">All</a></li>
                                                             <li><a href="#">Yes</a></li>
                                                             <li><a href="#">N/A</a></li>
@@ -707,30 +736,28 @@
             });
 
             var productList = [
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-bbbb","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Box","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+               
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Box","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+               
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Box","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+               
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Bullet","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+               
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Dome","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+               
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Turrent","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+               
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Dome","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+               
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Turrent","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+               
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Cube","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+               
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Cube","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+               
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Fisheye","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+               
 
             
             
@@ -1218,6 +1245,7 @@ var state = {
     'window': 6,
 }
 var result = [];
+var checkBoxValue = "";
 buildTable(productList)
 
 function pagination(querySet, page, rows) {
@@ -1306,6 +1334,7 @@ function buildTable(tableData) {
     for (var i = 1 in myList) {
      
         var row = `
+        
                  <div class="col">
                                    <a  href="product-detail.html">
                                     <div class="card">
@@ -1321,7 +1350,7 @@ function buildTable(tableData) {
                                             <div class="product-content p-3">
                                                
                                                 <a href="product-detail.html" class="fw-bold">${myList[i].modelName}</a>
-                                                <p class="text-muted">${myList[i].features}</p>
+                                                <p class="text-muted">${myList[i].resolution} ${myList[i].companyName} ${myList[i].caseType} ${myList[i].cameraType}</p>
                                                 
                                             </div>
                                         </div>
@@ -1339,19 +1368,31 @@ function buildTable(tableData) {
 
     pageButtons(data.pages)
 }
+ function searchByType(value){
+    result = [];
+    
+    for (var i=0 ; i < productList.length ; i++)
+   
+     {
+       
+    if (productList[i]["modelName"].toLocaleLowerCase() == value || productList[i]["caseType"].toLocaleLowerCase() == value.toLocaleLowerCase()) {
+        result.push(productList[i]);
+        console.log(productList[i])
+      }
+    }
+    if (value.length == 0 || value ==checkBoxValue){
+        console.log(productList)
+        checkBoxValue = " ";
+        buildTable(productList)
+    }
+    else if (value.length!= 0) {
+        console.log(result)
+        checkBoxValue = value;
+        buildTable(result)
+    }
+ }
+ 
 
-   $(document).ready(function(){
-      
-       $("#rating-5").change(function(){
-           if(this.checked){
-              
-            
-           }
-           else{
-              
-           }
-       })
-   })
    
    $(document).ready(function(){
   $("#productSearch").on("keyup", function() {
