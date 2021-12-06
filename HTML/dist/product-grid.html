@@ -707,30 +707,30 @@
             });
 
             var productList = [
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Innnnnnnnnnn","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-bbbb","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-bbbb","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
                 {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-I","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","features":"4K Outdoor WDR Fixed Bullet Network Camera"},
 
             
             
@@ -1217,8 +1217,8 @@ var state = {
     'rows': 6,
     'window': 6,
 }
-
-buildTable()
+var result = [];
+buildTable(productList)
 
 function pagination(querySet, page, rows) {
 
@@ -1276,21 +1276,35 @@ function pageButtons(pages) {
         $('#productList').empty()
 
         state.page = Number($(this).val())
-
-        buildTable()
+        if(result.length==0){
+            buildTable(productList)
+        }
+        else{
+            buildTable(result)
+        }
+        
     })
 
 }
 
 
-function buildTable(tableData=state.querySet) {
+function buildTable(tableData) {
+    console.log(tableData)
+    
+    
     var list = $('#productList')
 
+    if (tableData.length>0){
+       
+        list.empty()
+    }
+    
     var data = pagination(tableData, state.page, state.rows)
+    console.log(data)
     var myList = data.querySet
-
+    
     for (var i = 1 in myList) {
-        //Keep in mind we are using "Template Litterals to create rows"
+     
         var row = `
                  <div class="col">
                                    <a  href="product-detail.html">
@@ -1338,10 +1352,10 @@ function buildTable(tableData=state.querySet) {
            }
        })
    })
-
+   
    $(document).ready(function(){
   $("#productSearch").on("keyup", function() {
-      var result = [];
+     result = [];
     var value = $(this).val().toLowerCase();
     for (var i=0 ; i < productList.length ; i++)
      {
@@ -1353,6 +1367,7 @@ function buildTable(tableData=state.querySet) {
     }
     if (value.length == 0){
         console.log(productList)
+      
         buildTable(productList)
     }
     else{
