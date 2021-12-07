@@ -356,28 +356,41 @@
                                             </div>
                                             <div class="filter-category">
                                                 <ul class="category-list">
-                                                    <!-- <li><a href="#" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" class="collapsed">Subseries</a>
-                                                        <ul id="collapseOne" class="sub-category collapse" data-parent="#category" >
+                                                    <li><a href="#" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" class="collapsedOne">Subseries</a>
+                                                        <ul id="collapseOne" class="sub-category collapse" data-parent="#category">
+                                                           
                                                             <li class="type-check">
-                                                                <input type="checkbox" id="check-box" name="check-box" value="All">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All"  onclick="searchByType(value)">
                                                                 <label for="check-box"> All</label><br>
                                                             </li>
                                                             <li class="type-check">
-                                                                <input type="checkbox" id="check-box" name="check-box" value="EasyIP 4.0 with ColorVu">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="EasyIP 4.0 with ColorVu" !checked="checked" onclick="searchByType(value,checked)">
                                                                 <label for="check-box"> EasyIP 4.0 with ColorVu</label><br>
                                                             </li>
                                                             <li class="type-check">
-                                                                <input type="checkbox" id="check-box" name="check-box" value="EasyIP 4.0 with AcuSense">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="EasyIP 4.0 with AcuSense" onclick="searchByType(value)">
                                                                 <label for="check-box"> EasyIP 4.0 with AcuSense</label><br>
                                                             </li>
-
-                                                           
-                                                            <li><a href="#">EasyIP 3.0</a></li>
-                                                            <li><a href="#">EasyIP 2.0 Plus with AcuSense</a></li>
-                                                            <li><a href="#">EasyIP 2.0 Plus</a></li>
-                                                            <li><a href="#">EasyIP 1.0 Plus</a></li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="EasyIP 3.0" onclick="searchByType(value)">
+                                                                <label for="check-box"> EasyIP 3.0</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="EasyIP 2.0 Plus with AcuSense" onclick="searchByType(value)">
+                                                                <label for="check-box"> EasyIP 2.0 Plus with AcuSense</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="EasyIP 2.0 Plus" onclick="searchByType(value)">
+                                                                <label for="check-box"> EasyIP 2.0 Plus</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="EasyIP 1.0 Plus" onclick="searchByType(value)">
+                                                                <label for="check-box"> EasyIP 1.0 Plus</label><br>
+                                                            </li>
+                                                            
+                                                   
                                                         </ul>
-                                                    </li> -->
+                                                    </li>
                                                     <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Case Type</a>
                                                         <ul id="collapseTwo" class="sub-category collapse" data-parent="#category">
                                                            
@@ -390,23 +403,23 @@
                                                                 <label for="check-box"> Box</label><br>
                                                             </li>
                                                             <li class="type-check">
-                                                                <input type="checkbox" id="check-box" name="check-box" value="Bullet">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="Bullet" onclick="searchByType(value)">
                                                                 <label for="check-box"> Bullet</label><br>
                                                             </li>
                                                             <li class="type-check">
-                                                                <input type="checkbox" id="check-box" name="check-box" value="All">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="Dome" onclick="searchByType(value)">
                                                                 <label for="check-box"> Dome</label><br>
                                                             </li>
                                                             <li class="type-check">
-                                                                <input type="checkbox" id="check-box" name="check-box" value="All">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="Turrent" onclick="searchByType(value)">
                                                                 <label for="check-box"> Turrent</label><br>
                                                             </li>
                                                             <li class="type-check">
-                                                                <input type="checkbox" id="check-box" name="check-box" value="All">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="Fisheye" onclick="searchByType(value)">
                                                                 <label for="check-box"> Fisheye</label><br>
                                                             </li>
                                                             <li class="type-check">
-                                                                <input type="checkbox" id="check-box" name="check-box" value="All">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="Cube" onclick="searchByType(value)">
                                                                 <label for="check-box"> Cube</label><br>
                                                             </li>
                                                             
@@ -415,91 +428,232 @@
                                                     </li>
                                                     <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseThree">Resolution</a>
                                                         <ul id="collapseThree" class="sub-category collapse" data-parent="#category">
-                                                            <li><a href="#">All</a></li>
-                                                            <li><a href="#">2MP</a></li>
-                                                            <li><a href="#">3MP</a></li>
-                                                            <li><a href="#">4MP</a></li>
-                                                            <li><a href="#">5MP</a></li>
-                                                            <li><a href="#">6MP</a></li>
-                                                            <li><a href="#">8MP</a></li>
                                                            
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All"  onclick="searchByType(value)">
+                                                                <label for="check-box"> All</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="2MP" onclick="searchByType(value)">
+                                                                <label for="check-box"> 2MP</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="3MP" onclick="searchByType(value)">
+                                                                <label for="check-box"> 3MP</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="4MP" onclick="searchByType(value)">
+                                                                <label for="check-box"> 4MP</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="5MP" onclick="searchByType(value)">
+                                                                <label for="check-box"> 5MP</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="6MP" onclick="searchByType(value)">
+                                                                <label for="check-box"> 6MP</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="8MP" onclick="searchByType(value)">
+                                                                <label for="check-box"> 8MP</label><br>
+                                                            </li>
+                                                            
+                                                   
                                                         </ul>
                                                     </li>
                                                     <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseFour">Lens Type</a>
                                                         <ul id="collapseFour" class="sub-category collapse" data-parent="#category">
-                                                            <li><a href="#">All</a></li>
-                                                            <li><a href="#">Varifocal Lens</a></li>
-                                                            <li><a href="#">Fixed Lens</a></li>
-                                                            <li><a href="#">Motorized Lens </a></li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All"  onclick="searchByType(value)">
+                                                                <label for="check-box"> All</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="Varifocal Lens" onclick="searchByType(value)">
+                                                                <label for="check-box"> Varifocal Lens</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="Fixed Lens" onclick="searchByType(value)">
+                                                                <label for="check-box"> Fixed Lens</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="Motorized Lens" onclick="searchByType(value)">
+                                                                <label for="check-box"> Motorized Lens</label><br>
+                                                            </li>
+                                                           
+                                                            
                                                          </ul>
                                                     </li>
                                                     <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseFive">Illumination Level </a>
                                                         <ul id="collapseFive" class="sub-category collapse" data-parent="#category">
-                                                            <li><a href="#">All</a></li>
-                                                            <li><a href="#">Normal</a></li>
-                                                            <li><a href="#">Powered by Darkfighter</a></li>
-                                                            <li><a href="#">ColorVu</a></li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All"  onclick="searchByType(value)">
+                                                                <label for="check-box"> All</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="Normal" onclick="searchByType(value)">
+                                                                <label for="check-box"> Normal</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="Powered by Darkfighter" onclick="searchByType(value)">
+                                                                <label for="check-box"> Powered by Darkfighter</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="ColorVu" onclick="searchByType(value)">
+                                                                <label for="check-box"> ColorVu</label><br>
+                                                            </li>
                                                          </ul>
                                                     </li>
                                                     <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseSix">WDR</a>
                                                         <ul id="collapseSix" class="sub-category collapse" data-parent="#category">
-                                                            <li><a href="#">All</a></li>
-                                                            <li><a href="#">DWDR</a></li>
-                                                            <li><a href="#">True WDR</a></li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All"  onclick="searchByType(value)">
+                                                                <label for="check-box"> All</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="DWDR" onclick="searchByType(value)">
+                                                                <label for="check-box"> DWDR</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="True WDR" onclick="searchByType(value)">
+                                                                <label for="check-box"> True WDR</label><br>
+                                                            </li>
+                                                            
                                                            
                                                          </ul>
                                                     </li>
-                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseSeven">IR Distance </a>
+                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseSeven">Protection Level</a>
                                                         <ul id="collapseSeven" class="sub-category collapse" data-parent="#category">
-                                                            <li><a href="#">All</a></li>
-                                                            <li><a href="#">0-20m</a></li>
-                                                            <li><a href="#">21-50m</a></li>
-                                                            <li><a href="#">51-100m</a></li>
-                                                            <li><a href="#">N/A</a></li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All"  onclick="searchByType(value)">
+                                                                <label for="check-box"> All</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="IP66" onclick="searchByType(value)">
+                                                                <label for="check-box"> IP66</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="IP67" onclick="searchByType(value)">
+                                                                <label for="check-box"> IP67</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="IK08" onclick="searchByType(value)">
+                                                                <label for="check-box"> IK08</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="IK10" onclick="searchByType(value)">
+                                                                <label for="check-box"> IK10</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="N/A" onclick="searchByType(value)">
+                                                                <label for="check-box"> N/A</label><br>
+                                                            </li>
                                                          </ul>
                                                     </li>
-                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEight">Protection Level </a>
+                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEight">IR Distance</a>
                                                         <ul id="collapseEight" class="sub-category collapse" data-parent="#category">
-                                                            <li><a href="#">All</a></li>
-                                                            <li><a href="#">IP66</a></li>
-                                                            <li><a href="#">IP67</a></li>
-                                                            <li><a href="#">IK08</a></li>
-                                                            <li><a href="#">IK10</a></li>
-                                                            <li><a href="#">N/A</a></li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All"  onclick="searchByType(value)">
+                                                                <label for="check-box"> All</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="0-20m" onclick="searchByType(value)">
+                                                                <label for="check-box"> 0-20m</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="21-50m" onclick="searchByType(value)">
+                                                                <label for="check-box"> 21-50m</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="51-100m" onclick="searchByType(value)">
+                                                                <label for="check-box"> 51-100m</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="N/A" onclick="searchByType(value)">
+                                                                <label for="check-box"> N/A</label><br>
+                                                            </li>
+                                                            
                                                          </ul>
                                                     </li>
                                                     <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseNine">Power Supply</a>
                                                         <ul id="collapseNine" class="sub-category collapse" data-parent="#category">
-                                                            <li><a href="#">All</a></li>
-                                                            <li><a href="#">DC12V</a></li>
-                                                            <li><a href="#">DC12V&PoE</a></li>
-                                                            <li><a href="#">AC24V&DC12V&PoE</a></li>
-                                                            <li><a href="#">DC36V&PoE</a></li>
-                                                            <li><a href="#">DC24V&POE</a></li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All"  onclick="searchByType(value)">
+                                                                <label for="check-box"> All</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="DC12V" onclick="searchByType(value)">
+                                                                <label for="check-box"> DC12V</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="DC12V&PoE" onclick="searchByType(value)">
+                                                                <label for="check-box"> DC12V&PoE</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="AC24V&PoE" onclick="searchByType(value)">
+                                                                <label for="check-box"> AC24V&PoE</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="AC24V&DC12V&PoE" onclick="searchByType(value)">
+                                                                <label for="check-box"> AC24V&DC12V&PoE</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="AC24V&DC12V&PoE" onclick="searchByType(value)">
+                                                                <label for="check-box"> DC36V&PoE</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="DC24V&POE" onclick="searchByType(value)">
+                                                                <label for="check-box"> DC24V&POE</label><br>
+                                                            </li>
                                                          </ul>
                                                     </li>
                                                     <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTen">Storage Type</a>
                                                         <ul id="collapseTen" class="sub-category collapse" data-parent="#category">
-                                                            <li><a href="#">All</a></li>
-                                                            <li><a href="#">SD Card</a></li>
-                                                            <li><a href="#">N/A</a></li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All"  onclick="searchByType(value)">
+                                                                <label for="check-box"> All</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="SD Card" onclick="searchByType(value)">
+                                                                <label for="check-box"> SD Card</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="N/A" onclick="searchByType(value)">
+                                                                <label for="check-box">N/A</label><br>
+                                                            </li>
                                                             
                                                          </ul>
                                                     </li>
                                                     <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEleven">Wireless Network </a>
                                                         <ul id="collapseEleven" class="sub-category collapse" data-parent="#category">
-                                                            <li><a href="#">All</a></li>
-                                                            <li><a href="#">SD Card</a></li>
-                                                            <li><a href="#">N/A</a></li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All"  onclick="searchByType(value)">
+                                                                <label for="check-box"> All</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="Wi-Fi" onclick="searchByType(value)">
+                                                                <label for="check-box"> Wi-Fi</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="N/A" onclick="searchByType(value)">
+                                                                <label for="check-box">N/A</label><br>
+                                                            </li>
                                                             
                                                          </ul>
                                                     </li>
-                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsetwelve">Wireless Network </a>
+                                                    <li><a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsetwelve">AI</a>
                                                         <ul id="collapsetwelve" class="sub-category collapse" data-parent="#category">
-                                                            <li><a href="#">All</a></li>
-                                                            <li><a href="#">Yes</a></li>
-                                                            <li><a href="#">N/A</a></li>
-                                                            
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="All"  onclick="searchByType(value)">
+                                                                <label for="check-box"> All</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="Yes" onclick="searchByType(value)">
+                                                                <label for="check-box"> Yes</label><br>
+                                                            </li>
+                                                            <li class="type-check">
+                                                                <input type="checkbox" id="check-box" name="check-box" value="N/A" onclick="searchByType(value)">
+                                                                <label for="check-box">N/A</label><br>
+                                                            </li>
                                                          </ul>
                                                     </li>
                                                    
@@ -553,7 +707,7 @@
 
 
 
-                            <ul id="myUl"></ul>
+                           
                           
                        
                        
@@ -736,27 +890,46 @@
             });
 
             var productList = [
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Box","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Box","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with ColorVu","wirelessNetwork":"N/A"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Box","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with ColorVu","wirelessNetwork":"N/A"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Box","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with ColorVu","wirelessNetwork":"N/A"},
                
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Box","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Bullet","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with ColorVu","wirelessNetwork":"N/A"},
                
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Box","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Dome","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with ColorVu","wirelessNetwork":"N/A"},
                
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Bullet","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Turrent","resolution":"3MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with ColorVu","wirelessNetwork":"N/A"},
                
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Dome","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Dome","resolution":"3MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with ColorVu","wirelessNetwork":"N/A"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Box","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with ColorVu","wirelessNetwork":"N/A"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Box","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with ColorVu","wirelessNetwork":"N/A"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Box","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with ColorVu","wirelessNetwork":"N/A"},
                
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Turrent","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Bullet","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with ColorVu","wirelessNetwork":"N/A"},
                
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Dome","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Dome","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with ColorVu","wirelessNetwork":"N/A"},
                
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Turrent","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Turrent","resolution":"3MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with ColorVu","wirelessNetwork":"N/A"},
                
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Cube","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Dome","resolution":"3MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with ColorVu","wirelessNetwork":"N/A"},
                
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Cube","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Turrent","resolution":"4MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with AcuSense","wirelessNetwork":"N/A"},
                
-                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Fisheye","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-AAA","caseType":"Cube","resolution":"4MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with AcuSense","wirelessNetwork":"N/A"},
+               
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-bbb","caseType":"Cube","resolution":"5MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 4.0 with AcuSense","wirelessNetwork":"N/A"},
+               
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Fisheye","resolution":"5MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 2.0 Plus with AcuSense","wirelessNetwork":"Wi-Fi"},
+                {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Dome","resolution":"2MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 2.0 Plus with AcuSense","wirelessNetwork":"Wi-Fi"},
+               
+               {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Turrent","resolution":"8MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 2.0 Plus with AcuSense","wirelessNetwork":"Wi-Fi"},
+              
+               {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Cube","resolution":"8MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 2.0 Plus with AcuSense","wirelessNetwork":"Wi-Fi"},
+              
+               {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Cube","resolution":"6MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 2.0 Plus with AcuSense","wirelessNetwork":"Wi-Fi"},
+              
+               {"imageSrc":"assets/images/product/camera.png","modelName":"DS-2CD2083G0-Asif","caseType":"Fisheye","resolution":"6MP","lensType":"Varifocal Lens","illuminationLevel":"Normal","iRDistance":"0-20m","wdr":"DWDR","protectionLevel":"IP66","powerSupply":"DC12V","storageType":"SD Card","Wireless Network":"Wi-Fi","AI":"Yes","companyName":"Powered By DarkFighter","cameraType":"Network Camera","subSeries":"EasyIP 1.0 Plus","wirelessNetwork":"Wi-Fi"}
+              
                
 
             
@@ -1255,7 +1428,7 @@ function pagination(querySet, page, rows) {
 
     var trimmedData = querySet.slice(trimStart, trimEnd)
 
-    var pages = Math.round(querySet.length / rows);
+    var pages = Math.ceil(querySet.length / rows);
 
     return {
         'querySet': trimmedData,
@@ -1301,15 +1474,16 @@ function pageButtons(pages) {
     }
 
     $('.page').on('click', function() {
-        $('#productList').empty()
-
+        // $('#productList').empty()
+        console.log(result)
         state.page = Number($(this).val())
-        if(result.length==0){
-            buildTable(productList)
-        }
+      if(result.length==0){
+           buildTable(productList)
+         }
         else{
-            buildTable(result)
+             buildTable(result)
         }
+       
         
     })
 
@@ -1323,8 +1497,7 @@ function buildTable(tableData) {
     var list = $('#productList')
 
     if (tableData.length>0){
-       
-        list.empty()
+       list.empty()
     }
     
     var data = pagination(tableData, state.page, state.rows)
@@ -1365,30 +1538,45 @@ function buildTable(tableData) {
                  `
                  list.append(row)
     }
-
+    console.log(data.pages)
     pageButtons(data.pages)
 }
- function searchByType(value){
+ function searchByType(value,checked){
+    console.log(checked)
     result = [];
     
     for (var i=0 ; i < productList.length ; i++)
    
      {
        
-    if (productList[i]["modelName"].toLocaleLowerCase() == value || productList[i]["caseType"].toLocaleLowerCase() == value.toLocaleLowerCase()) {
+    if (
+        productList[i]["modelName"].toLocaleLowerCase() == value.toLocaleLowerCase()  || 
+        productList[i]["subSeries"].toLocaleLowerCase() == value.toLocaleLowerCase()  || 
+        productList[i]["caseType"].toLocaleLowerCase() == value.toLocaleLowerCase()  ||
+        productList[i]["resolution"].toLocaleLowerCase() == value.toLocaleLowerCase()  ||
+        productList[i]["lensType"].toLocaleLowerCase() == value.toLocaleLowerCase()  ||
+        productList[i]["illuminationLevel"].toLocaleLowerCase() == value.toLocaleLowerCase()  ||
+        productList[i]["wdr"].toLocaleLowerCase() == value.toLocaleLowerCase()  ||
+        productList[i]["iRDistance"].toLocaleLowerCase() == value.toLocaleLowerCase()  ||
+        productList[i]["protectionLevel"].toLocaleLowerCase() == value.toLocaleLowerCase()  ||
+        productList[i]["powerSupply"].toLocaleLowerCase() == value.toLocaleLowerCase()  ||
+        productList[i]["storageType"].toLocaleLowerCase() == value.toLocaleLowerCase()  ||
+        productList[i]["wirelessNetwork"].toLocaleLowerCase() == value.toLocaleLowerCase()  
+    
+     ) {
         result.push(productList[i]);
-        console.log(productList[i])
+        console.log("get in any data in result filed")
       }
     }
-    if (value.length == 0 || value ==checkBoxValue){
-        console.log(productList)
-        checkBoxValue = " ";
-        buildTable(productList)
-    }
-    else if (value.length!= 0) {
-        console.log(result)
+    if (result.length >0 && checked){
+      
         checkBoxValue = value;
         buildTable(result)
+    }
+    else {
+       
+        checkBoxValue = " ";
+        buildTable(productList)
     }
  }
  
